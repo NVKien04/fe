@@ -1,0 +1,506 @@
+/* responsive: pc>= 1024px,  1024px>tablet >= 740px,mobile<740px */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Helvetica, arial, sans-serif;
+}
+
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.mt-8{
+    margin-top: 8px;
+}
+.mt-16{
+    margin-top: 16px;
+}
+.row ::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.col-half{
+    width: 50%;
+}
+.col-third{
+    width: 33.33333%;
+}
+.col-full{
+    width: 100%;
+}
+
+
+
+#wrapper{
+    /* position: relative; */
+
+
+}
+
+#header{
+    position: fixed;
+    height: 46.5px;
+    max-width: 100%;
+    background-color: black;
+    top:0;
+    left:0;
+    right: 0;
+    z-index: 9999;
+    /* overflow: hidden; */
+
+}
+
+
+#nav > li {
+    display: inline-block;
+    position: relative;
+    text-transform: uppercase;
+    
+}
+#nav{
+    display: inline-block;
+}
+#nav > li > a{
+    color: white;
+    display: inline-block
+    
+}
+#nav li a{
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px 0  24px;
+    
+}
+#nav > li:hover >a,
+.subnav > li:hover >a {
+    color: black;
+    background-color: #ccc;
+    cursor: pointer;
+    
+}
+
+#nav li:hover .subnav{
+    display: block;
+}
+
+#nav .subnav{
+    /* display: none; */
+    display: none;
+    background-color: white;
+    position: absolute;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    min-width: 160px;
+    text-transform:none;
+    list-style-type: none;  
+}
+
+#nav .subnav > li a {
+    color:black;
+    display: block;
+    padding-left: 16px;
+    line-height: 38px;
+}
+#nav .nav-arrow-down{
+    font-size: 16px;
+
+}
+.mobile-menu,
+#btn-search{
+    float:right;
+}
+.mobile-menu,
+#btn-search .btn-timkiem{
+    font-size: 16px;
+    color: white;
+    line-height: 46px;
+    padding:0px 16px 0 16px; 
+    
+}
+
+#btn-search .btn-timkiem:hover{
+    background-color: red;
+    cursor: pointer;
+}
+.mobile-menu{
+    display: none;
+}
+
+#silder{
+     position: relative;
+     margin-top: 46.5px;
+     padding-top: 50%;
+     background:url('../slider/chicago.jpg') top center / cover no-repeat;
+     
+}
+#silder .text-content{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    padding: 50px ;
+}
+#silder .text-content .heading{
+    color: white;
+    font-size: 24px;
+    padding: 16px 0;
+}
+#silder .text-content .description{
+    color: white;
+    font-size: 15px;
+}
+
+
+#content{
+     min-height: 1000px;
+     background-color: white;
+     display: flex;
+     flex-direction: column;
+}
+.content-section{
+    width: 800px;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 64px 16px;
+    text-align: center;
+}
+.section-heading{
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 4px;
+
+}
+.section-sub-heading{
+    margin-top: 25px;
+    font-size: 15px;
+    color: gray ;
+    font-style: italic;
+
+}
+.about-text{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 15px;
+    text-align: justify ;
+    line-height: 1.5;
+    font-family: "Lato", sans-serif;
+}
+.member-list{
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+    max-width: 100%;
+    padding: 0 16px 64px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.member-item{
+    width: 33.33333%;
+    text-align: center;
+    float: left;
+}
+.member-name{
+    font-size: 15px;
+    line-height: 22.5px;
+    margin: 15px 0 15px 0;
+
+}
+.member-avt{
+    width: 60%;
+    border-radius: 4px;
+
+}
+.tour_section{
+    background-color: black;
+}
+.text-white{
+    color: white !important;
+}
+.tour_section .ticklist{
+    background-color: white ;
+    margin-top: 40px;
+}
+.tour_section .ticklist > li{
+    color: black;
+    padding: 11px 16px;
+    font-size: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    color: #757575 !important;
+    list-style-type: none;
+}
+.ticklist >li .sold-out{
+    background-color: red;
+    display: inline-block;
+    padding:0 8px 0 8px;
+    color: white;
+    font-family: "Lato", sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+.margin-16px{
+    margin-left: 16px !important;
+}
+.ticklist >li .quantity{
+    float: right;
+    margin-right: 16px !important;
+    font-size: 15px;
+    padding: 0 8px 0 8px;
+    line-height: 1.5;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+} 
+
+.place-list{
+    padding: 64px 0;
+    display: flex;
+    flex-direction: row;
+    margin-top: 32px ;
+    
+    
+}
+.place-item{
+    width: 33.33333%;
+    
+    
+}
+.place-img{
+    width: 100%;
+    display: block;
+}
+.place-img:hover{
+    opacity: 0.6;
+}
+
+.place-body{
+    background-color: white;
+    font-size: 15px;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+    padding-left: 16px;
+    padding-right: 16px;
+    text-align: left;
+}
+.place-heading{
+    font-size: 15px;
+    margin-top: 15px;
+
+}
+.place-time{
+    opacity: 0.6;
+    margin-top: 15px;
+}
+.place-desc{
+    margin-top: 15px;
+
+}
+.place-btn{
+    margin-top: 15px;
+    margin-bottom: 16px;
+    padding:8px 16px;
+    background-color: black;
+    color: white;
+    width: 120px;
+    
+    border: none;
+  
+}
+.place-btn:hover{
+    opacity: 0.6;
+}
+.contact-content{
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
+.contact-info{
+    font-size: 18px;
+    text-align: left;
+}
+.contact-info i[class*="ti-"]{
+    width: 30px;
+    display: inline-block;
+    line-height: 1.5;
+    
+}
+.from-control{
+    padding: 11px;
+    border: 1px solid #ccc;
+    width: 100%;
+
+}
+.btn-send{
+    float:right;
+    padding: 10px 15px;
+    background: #000;
+    color: #fff;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+.btn-send:hover{
+    background-color: #ccc;
+    color: #000;
+}
+
+.map-img{
+    width: 100%;
+    margin-top: 32px;
+    filter: grayscale(0.5);
+}
+
+
+
+.footer{
+    padding: 64px 16px;
+    text-align: center;
+
+}
+.social >a{
+    text-decoration: none;
+    font-size: 24px;
+    color: #000;
+    opacity: 0.6;
+}
+.social >a:hover{
+    opacity: 0.4;
+}
+.copy-r{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #000;
+    font-size: 15px;
+    opacity: 0.6;
+}
+.copy-r .w3{
+    color: #000;
+    opacity: 0.6;
+}
+.model{
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.model-container{
+    background-color: white;
+    width: 900px;
+    min-height: 200px;
+    position: relative;
+    max-width: calc(100% - 32px);
+    animation: modelAnimation ease 0.5s;
+}
+.model-header{
+    background-color: #009688;
+    height: 130px;
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff;
+}
+.modal-heading-icon{
+    margin-right: 16px;
+}
+.model-close{
+    position: absolute;
+    right: 0;
+    top:0;
+    color: #fff;
+    padding: 12px;
+}
+.model-close:hover{
+    cursor: pointer;
+    opacity: 0.9;
+    background-color: #757575;
+    color: black;
+}
+.model-body{
+    padding:0 16px;
+}
+.model-label{
+    display: block;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-top: 15px;
+
+}
+.model-input{
+    display: block;
+    border: 1px solid #ccc;
+    padding: 8px;
+    margin-top: 15px;
+    font-size: 15px;
+    line-height: 1.5;
+    width: 100%;
+
+}
+#buy-tickets{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    line-height: 1.5;
+    width: 100%;
+    padding: 16px;
+    background-color: #009688;
+    border: none;
+    color: #fff;
+}
+#buy-tickets:hover{
+    background-color: #757575;
+    color: black;
+    cursor: pointer;
+
+}
+.model-footer{
+    float: right;
+    margin-right: 16px;
+    margin-bottom: 15px;
+}
+.need-help{
+    font-size: 15px;
+    line-height: 1.5;
+}
+a.help {
+    color: blue;
+}
+.model.open{
+    display: flex;
+}
+@keyframes modelAnimation{
+    from {
+        opacity: 0;
+        transform: translateY(-140px);      
+    }
+    to {
+        outline: 1;
+        transform: translateY(0);
+    }
+}
+/* tablet */
+@media (min-width: 768px) and {
+    #header{
+        width: 100%;
+    }
+}
+
